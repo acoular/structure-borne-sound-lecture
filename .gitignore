@@ -14,6 +14,9 @@
 # *.ps
 # *.eps
 # *.pdf
+*KS*.pdf
+./tikzfig/*
+.ipynb_checkpoints/*.ipynb
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
