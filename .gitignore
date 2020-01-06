@@ -17,6 +17,7 @@
 *KS*.pdf
 ./tikzfig/*
 .ipynb_checkpoints/*.ipynb
+*__pycache__
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
