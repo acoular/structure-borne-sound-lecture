@@ -1,0 +1,19 @@
+﻿\begin{tikzpicture}
+	\tikzstyle{spring}=[thick,decorate,decoration={zigzag,pre length=0.3cm,post length=0.3cm,segment length=6}]
+	\tikzstyle{damper}=[thick,decoration={markings,  
+		mark connection node=dmp,
+		mark=at position 0.5 with 
+		{
+			\node (dmp) [thick,inner sep=0pt,transform shape,rotate=-90,minimum width=15pt,minimum height=3pt,draw=none] {};
+			\draw [thick] ($(dmp.north east)+(2pt,0)$) -- (dmp.south east) -- (dmp.south west) -- ($(dmp.north west)+(2pt,0)$);
+			\draw [thick] ($(dmp.north)+(0,-5pt)$) -- ($(dmp.north)+(0,5pt)$);
+		}
+	}, decorate]
+	\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=0.75cm,minimum height=0.3cm]
+	\tikzstyle{mass}=[draw,minimum width=1.8cm, minimum height=1cm,thick,outer sep=0pt,xscale=1]
+	\node(g) at (0,0) [ground,minimum width=2cm] {};
+	\draw[thick](g.north west) -- (g.north east);
+	\node(m1) at (0,2) [mass] {$m$};
+	\draw[spring]  ($(m1.245) -(0,1.35)$) -- +(0,1.35) node [pos=0.5,left] {$s$};
+	\draw[damper] ($(m1.295) -(0,1.35)$) -- +(0,1.35) node [pos=0.5,below right] {$c$};
+\end{tikzpicture}

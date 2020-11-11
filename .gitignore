@@ -15,7 +15,6 @@
 # *.eps
 # *.pdf
 *KS*.pdf
-./tikzfig/*
 .ipynb_checkpoints/*.ipynb
 *__pycache__
 
