@@ -1,0 +1,14 @@
+﻿\begin{tikzpicture}[>=latex,scale=3,thick]
+\draw (0,0) rectangle (1,1);
+\draw[dashed] (0.1,0.1) rectangle (1.1,1.1);
+\draw[thin] (-0.3,1)node [above left] {$\xi_y$} --(-0.05,1) ;
+\draw[thin] (-0.3,1.1)--(-0.05,1.1);
+\draw[->] (-0.2,0.8) -- (-0.2,1) ;
+\draw[->] (-0.2,1.3)--(-0.2,1.1);
+\begin{scope}[rotate=90,yshift=-2.1cm]
+\draw[thin] (-0.3,1)node [below left] {$\xi_x$} --(-0.05,1) ;
+\draw[thin] (-0.3,1.1)--(-0.05,1.1);
+\draw[->] (-0.2,0.8) -- (-0.2,1) ;
+\draw[->] (-0.2,1.3)--(-0.2,1.1);
+\end{scope}
+\end{tikzpicture}

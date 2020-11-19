@@ -1,0 +1,10 @@
+﻿\begin{tikzpicture}[>=latex,scale=3,thick]
+\draw (0,0) rectangle (1,1);
+\draw[dashed] (0,0) -- (10:1) -- ++(80:1) -- ++(190:1) -- cycle;
+\draw[thin] (1.05,0)  -- +(0.25,0);
+\draw[thin,rotate=10] (1.05,0)  -- +(0.25,0);
+\draw[thin,<->] (1.2,0) arc (0:10:1.2) node [midway, right]{$\frac{\gamma_{xy}}{2}$};
+\draw[thin,rotate=80] (1.05,0)  -- +(0.25,0);
+\draw[thin,rotate=90] (1.05,0)  -- +(0.25,0);
+\draw[thin,<->] (0,1.2) arc (90:80:1.2) node [midway, above]{$\frac{\gamma_{xy}}{2}$};
+\end{tikzpicture}

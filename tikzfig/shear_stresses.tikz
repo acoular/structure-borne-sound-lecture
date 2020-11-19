@@ -1,0 +1,18 @@
+﻿\begin{tikzpicture}[>=latex,scale=3,thick]
+\draw (0,0) -- (10:1) node (A) [midway, below] {} 
+-- ++(80:1)node (B) [midway, right] {} 
+ -- ++(190:1)node (C) [midway, above] {} 
+ -- cycle node (D) [midway, left] {} ;
+\begin{scope}[shift= {(A)},rotate=10]
+\draw[<-](-0.2,0)--(+0.2,0) node[midway,below]{$\tau_{yx}$};
+\end{scope}
+\begin{scope}[shift= {(B)},rotate=-100]
+\draw[<-](-0.2,0)--(+0.2,0) node[midway,right]{$\tau_{xy}$};
+\end{scope}
+\begin{scope}[shift= {(C)},rotate=190]
+\draw[<-](-0.2,0)--(+0.2,0) node[midway,above]{$\tau_{yx}$};
+\end{scope}
+\begin{scope}[shift= {(D)},rotate=80]
+\draw[<-](-0.2,0)--(+0.2,0) node[midway,left]{$\tau_{xy}$};
+\end{scope}
+\end{tikzpicture}

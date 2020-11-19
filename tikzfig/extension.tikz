@@ -1,0 +1,15 @@
+﻿\begin{tikzpicture}[>=latex,scale=3,thick]
+\draw (0,0) rectangle (1,1);
+\draw[dashed] (0,0) rectangle (1.1,1.1);
+\draw[thin] (-0.3,1)node [above left] {$\epsilon_y dy$} --(-0.05,1) ;
+\draw[thin] (-0.3,1.1)--(-0.05,1.1);
+\draw[thin] (-0.3,0)--(-0.05,0);
+\draw[<->] (-0.2,0.0) -- (-0.2,1) node [midway, left]{$dy$};
+\draw[->] (-0.2,1.3)--(-0.2,1.1);
+
+\draw[thin] (1,-0.3)node [below right] {$\epsilon_x dx$} --(1,-0.05) ;
+\draw[thin] (1.1,-0.3)--(1.1,-0.05);
+\draw[thin] (0,-0.3)--(0,-0.05);
+\draw[<->] (0,-0.2) -- (1,-0.2) node [midway, below]{$dx$};
+\draw[->] (1.3,-0.2)--(1.1,-0.2);
+\end{tikzpicture}
