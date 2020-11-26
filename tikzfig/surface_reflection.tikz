@@ -1,0 +1,23 @@
+﻿\begin{tikzpicture}[>=latex]
+	\draw[fill,pattern=north east lines,draw=none,pattern color=gray] (-2.5,0) rectangle (4,-0.3);
+	\draw[thick](-2.5,0) -- (4,0);
+	\draw[dashdotted](0,0) -- +(0,-4);
+	\draw[<-,red,](0,0) -- (-135:4) node[below,text width=1.8cm]{incident L-wave};
+	\draw[->,red,] (0,0) -- (-45:4) node[below right,text width=1.8cm]{reflected L-wave};
+	\draw[->,blue,](0,0) -- (-60:4) node[below,text width=1.8cm]{reflected T-wave};
+	\draw[dashed,red] (0,0) -- (135:3.1) ;
+	\draw[dashed,blue](0,0) -- (120:3.6);
+	\draw[->,very thick](-1.5,0) --+(1,0) node [midway, above] {$k_x$};
+	\draw[<-,red,very thick] +(-135:0.7)-- +(-135:2.1) node[midway,below right] {$k_L$};
+	\draw[dashed] +(-1.5,0)-- +(-135:2.1);
+ 	\draw[dashed] +(-0.5,0)-- +(-135:0.7);
+	\draw[->,very thick] ++(0.5,0) --+(1,0) node [midway, above] {$k_x$};
+	\draw[->,red,very thick] +(-45:0.7)-- +(-45:2.1) node[above right] {$k_L$};
+	\draw[->,blue,very thick] +(-60:1)-- +(-60:3) node[midway, left] {$k_T$};
+	\draw[dashed] +(1.5,0)-- +(-60:3);
+ 	\draw[dashed] +(0.5,0)-- +(-60:1);
+ 	\draw (0,-2.5) arc (-90:-135:2.5) node[midway, above]{$\vartheta_{iL}$};
+	\draw (0,-3) arc (-90:-225:3.0) node[pos=0.5, right]{$\vartheta_{rL}$};
+	\draw (0,-3.5) arc (-90:-240:3.5) node[pos=0.75, left]{$\vartheta_{rT}$};
+	\draw [<->](2,2.5) node[right] {$y$} -- ++(0,-1) -- +(1,0) node[above]{$x$};
+\end{tikzpicture}

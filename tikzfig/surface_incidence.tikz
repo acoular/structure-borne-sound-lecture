@@ -1,0 +1,8 @@
+﻿\begin{tikzpicture}[>=latex]
+	\draw[fill,pattern=north east lines,draw=none,pattern color=gray] (-4,0) rectangle (4,-0.3);
+	\draw[thick](-4,0) -- (4,0) node [pos=0.8,above]{free surface};
+	\draw[dashdotted](0,0) -- +(0,-3);
+	\draw[<-,red,thick](0,0) -- +(-120:3) node[below,text width=1.8cm]{incident wave};
+	\draw (0,-2) arc (-90:-120:2) node[midway, above]{$\vartheta$};
+	\draw [<->](-4,-3.5) node[right] {$y$} -- ++(0,-1) -- +(1,0) node[above]{$x$};
+\end{tikzpicture}
