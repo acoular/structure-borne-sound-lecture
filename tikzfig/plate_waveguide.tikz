@@ -1,0 +1,30 @@
+﻿\begin{tikzpicture}[>=latex]
+ 	\draw [<->](3,3.5) node[right] {$y$} -- ++(0,-1) -- +(1,0) node[above]{$x$};
+	\draw[->](3,2.5) -- +(-0.5,-0.5) node[below right]{$z$};
+
+	\path[pattern = north east lines,pattern color=gray!30!white] (-4,1.5) rectangle (4,-1.5);
+	\draw[thick] (-4,-1.5) -- +(8,0);
+	\draw[thick] (-4,1.5) -- +(8,0);
+	\draw[loosely dashdotted] (-4.5,0) -- (4.5,0);
+	\draw (4,0) -- (4.4,0);
+	\draw[<->] (4.2,-1.5) -- (4.2,0) node[midway, right] {$\frac{h}{2}$} ;
+	\draw[<->] (4.2,1.5) -- (4.2,0) node[midway, right] {$\frac{h}{2}$} ;
+   \foreach \x in {-3.5,...,3.5}
+{
+    \draw[help lines](\x,1.5) -- +(0,0.2);
+    \draw[help lines](\x,-1.5) -- +(0,-0.2);
+}
+\begin{scope}
+	\path[clip]  (-4,1.5) rectangle (4,-1.5);
+   \foreach \x in {-3.5,0.5}
+{
+	\draw[thick,red] (\x-1,-1.5) -- +(2,3);
+	\draw[thick,red] (\x,-1.5) -- +(2,3);
+	\draw[ultra thick,red,->] (\x,-0.75) -- +(1,1.5);
+	\draw[thick,blue] (\x+1,1.5) -- +(2,-3);
+	\draw[thick,blue] (\x+2,1.5) -- +(2,-3);
+	\draw[ultra thick,blue,->] (\x+2,0.75) -- +(1,-1.5);
+}
+\end{scope}
+%\draw[decorate,decoration=brace] (-2.5,1.8) -- +(1,0)node[midway,above]{$k_x$};
+\end{tikzpicture}
