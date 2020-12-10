@@ -1,0 +1,21 @@
+﻿\begin{tikzpicture}[>=latex,scale=1.5,thick]
+\draw[thin] (0,-0.5,-0.5) -- +(6,0,0);
+\draw[thin,fill=gray!30!white] (3,-0.5,-0.5) -- +(0,0,1)-- +(0,1,1)-- +(0,1,0) --cycle;
+\draw[decorate,decoration={random steps,amplitude=0.3mm,segment length=1mm}]
+ (0,-0.5,-0.5)  +(0,0,1)-- +(0,1,1)-- +(0,1,0);
+\draw[thin,decorate,decoration={random steps,amplitude=0.3mm,segment length=1mm}]
+ (0,0.5,-0.5)-- +(0,-1,0)-- +(0,-1,1);
+\draw[decorate,decoration={random steps,amplitude=0.3mm,segment length=1mm}]
+ (6,-0.5,-0.5) -- +(0,0,1)-- +(0,1,1)-- +(0,1,0) --cycle;
+\draw (0,0.5,-0.5) -- +(6,0,0);
+\draw (0,0.5,0.5) -- +(6,0,0);
+\draw (0,-0.5,0.5) -- +(6,0,0);
+\begin{scope}[->,scale=1]
+\draw (-2,0,0) -- +(1,0,0) node[below] {$x$};
+\draw (-2,0,0) -- +(0,1,0) node[above] {$y$};
+\draw (-2,0,0) -- +(0,0,1) node[below] {$z$};
+\end{scope}
+\draw[->] (3,1,0)node[above] {$F_y$}  -- +(0,-0.5,0) ;
+\draw[->] (0,-1,0.5) -- +(6,0,0);
+\draw[thin] (3,-0.9,0.5) -- +(0,-0.2,0) node [below] {$x=0$};
+\end{tikzpicture}

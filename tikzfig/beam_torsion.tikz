@@ -1,0 +1,25 @@
+﻿\begin{tikzpicture}[>=latex,scale=2,thick]
+\draw[help lines, dashdotted] (-0.25,0,0) -- (2.25,0,0);
+\draw[thin] (0,-0.61,-0.35) -- (2,-0.64,-0.3);
+\draw (0,-0.61,-0.35) -- (0,-0.35,0.61) -- (0,0.61,0.35) -- (0,0.35,-0.61)-- cycle;
+\draw[thin,dashed] (2,-0.61,-0.35) -- (2,-0.35,0.61) -- (2,0.61,0.35) -- (2,0.35,-0.61)-- cycle;
+\draw (2,-0.64,-0.30) -- (2,-0.30,0.64) -- (2,0.64,0.3) -- (2,0.3,-0.64)-- cycle;
+\draw (0,-0.35,0.61) -- (2,-0.3,0.64);
+\draw (0,0.61,0.35) -- (2,0.64,0.3);
+\draw (0,0.35,-0.61) -- (2,0.3,-0.64);
+\begin{scope}[thin,rotate around y = -90]
+\draw[] (0,0,0) -- (xyz polar cs:angle=90,radius=1.5);
+\draw[] (0,0,0) -- (xyz polar cs:angle=105,radius=1.5);
+\draw[] (xyz polar cs:angle=90,radius=1.3) arc (90:105:1.3) node [right]{$\chi_x$};
+
+\draw[xshift=2cm] (0,0,0) -- (xyz polar cs:angle=90,radius=1.5);
+\draw[xshift=2cm] (0,0,0) -- (xyz polar cs:angle=110,radius=1.5);
+\draw[xshift=2cm] (xyz polar cs:angle=90,radius=1.3) arc (90:110:1.3) node [right]{$\chi_x+\frac{\partial\chi_x}{\partial x} dx$};
+\end{scope}
+\begin{scope}[->,scale=0.5,xshift=-1cm]
+\draw (-2,0,0) -- +(1,0,0) node[above] {$x$};
+\draw (-2,0,0) -- +(0,1,0) node[above] {$y$};
+\draw (-2,0,0) -- +(0,0,1) node[below] {$z$};
+\end{scope}
+\draw[thin,<->] (0,0.8,0) -- +(2,0,0) node [midway, above]{$dx$};
+\end{tikzpicture}
