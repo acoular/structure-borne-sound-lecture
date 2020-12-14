@@ -1,0 +1,14 @@
+﻿\begin{tikzpicture}[>=latex,scale=2,thick]
+\draw[decorate,decoration={random steps,amplitude=0.3mm,segment length=1mm}]
+(-2,0,2) -- +(0,-0.5,0)-- +(4,-0.5,0)-- +(4,-0.5,-4) -- +(4,0,-4) +(4,0,0) -- +(4,-0.5,0);
+\draw[decorate,decoration={random steps,amplitude=0.3mm,segment length=1mm},fill=gray!20!white]
+(-2,0,-2) -- +(4,0,0)-- +(4,0,4)-- +(0,0,4) --cycle;
+\draw[rotate around x=-90,fill=white] (0.5,0,0) arc (0:360:0.5);
+\draw[rotate around x=-90,->] (0,0,0) -- (40:1) node[right]{$r$};
+\draw[<-] (0,0,0) -- +(0,1,0) node [above] {$F_y$};
+\begin{scope}[->,scale=0.5,xshift=-4cm]
+\draw (-2,0,0) -- +(1,0,0) node[below] {$x$};
+\draw (-2,0,0) -- +(0,1,0) node[above] {$y$};
+\draw (-2,0,0) -- +(0,0,1) node[below] {$z$};
+\end{scope}
+\end{tikzpicture}
