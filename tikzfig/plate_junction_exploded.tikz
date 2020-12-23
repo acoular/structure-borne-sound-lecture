@@ -1,0 +1,27 @@
+﻿\begin{tikzpicture}[>=latex,scale=2.5,thick]
+\draw[thin,dashdotted] (0.5,0,2.5) -- (0.5,0,-2.5);
+\draw[ultra thick](2,0,2) -- (0.5,0,2) -- (0.5,0,-2) -- (2,0,-2);
+\draw[decorate,decoration={random steps,amplitude=0.3mm,segment length=1mm}](2,0,2) -- (2,0,-2);
+\node at (1.5,0,-1) {2};
+\draw[->] (0.5,0,2.5) -- +(0.25,0,0) node[below] {$x$};
+\draw[->] (0.5,0,2.5)-- +(0,0.25,0) node[above] {$y$};
+\draw[->] (0.5,0,2.5) -- +(0,0,0.25) node[below] {$z$};
+\begin{scope}[rotate around z=180]
+	\draw[thin,dashdotted] (0.5,0,2.5) -- (0.5,0,-2.5);
+	\draw[ultra thick](2,0,2) -- (0.5,0,2) -- (0.5,0,-2) -- (2,0,-2);
+	\draw[decorate,decoration={random steps,amplitude=0.3mm,segment length=1mm}](2,0,2) -- (2,0,-2);
+	\node at (1.5,0,-1) {1};
+	\draw[->] (0.5,0,2.5) -- +(0.25,0,0) node[left] {$x$};
+	\draw[->] (0.5,0,2.5)-- +(0,0.25,0) node[below] {$y$};
+	\draw[->] (0.5,0,2.5) -- +(0,0,0.25) node[left] {$z$};
+\end{scope}
+\node at (-0.8,-0.2,2.8) {local 1};
+\node at (0.8,-0.2,2.8) {local 2};
+\begin{scope}[red]
+\draw[dashdotted] (0,0,2.5) -- (0,0,-2.5);
+\draw[->] (0,0,2.5) -- +(0.25,0,0) node[below] {$x$};
+\draw[->] (0,0,2.5)-- +(0,0.25,0) node[above] {$y$};
+\draw[->] (0,0,2.5) -- +(0,0,0.25) node[below] {$z$};
+\node at (0,-0.2,2.8) {global};
+\end{scope}
+\end{tikzpicture}

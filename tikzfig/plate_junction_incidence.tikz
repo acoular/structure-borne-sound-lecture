@@ -1,0 +1,18 @@
+﻿\begin{tikzpicture}[>=latex,scale=2.5,thick]
+\draw[thin,dashdotted] (0.5,0,2.5) -- (0.5,0,-2.5);
+\draw[ultra thick](2,0,2) -- (0.5,0,2) -- (0.5,0,-2) -- (2,0,-2);
+\draw[decorate,decoration={random steps,amplitude=0.3mm,segment length=1mm}](2,0,2) -- (2,0,-2);
+\node at (1.5,0,-1) {2};
+\begin{scope}[rotate around z=180]
+	\draw[thin,dashdotted] (0.5,0,2.5) -- (0.5,0,-2.5);
+	\draw[ultra thick](2,0,2) -- (0.5,0,2) -- (0.5,0,-2) -- (2,0,-2);
+	\draw[decorate,decoration={random steps,amplitude=0.3mm,segment length=1mm}](2,0,2) -- (2,0,-2);
+	\node at (1.5,0,-1) {1};
+\end{scope}
+\draw[thin,dashdotted] (-0.5,0,0) -- +(-2,0,0);
+\draw[<-] (-0.6,0,0.1) -- +(-0.9,0,0.9) node[below]{incident wave};
+\draw[rotate around x=-90,thin](-0.5,-1,0) arc (270:225:1) node[pos=0.4,above right]{$\varphi$};
+\begin{scope}[red]
+\draw[dashdotted] (0,0,2.5) -- (0,0,-2.5);
+\end{scope}
+\end{tikzpicture}

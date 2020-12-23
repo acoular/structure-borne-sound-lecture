@@ -1,0 +1,19 @@
+﻿\begin{tikzpicture}[>=latex,scale=2.5,thick]
+\foreach \t/\n in {-50/3,20/2,170/1} {
+\begin{scope}[rotate around z=\t]
+	\draw[thin,dashdotted] (0.5,0,2.5) -- (0.5,0,-2.5);
+	\draw[ultra thick,fill=white](2,0,2) -- (0.5,0,2) -- (0.5,0,-2) -- (2,0,-2);
+	\draw[decorate,decoration={random steps,amplitude=0.3mm,segment length=1mm}](2,0,2) -- (2,0,-2);
+	\node at (1.5,0,-1) {\n};
+	\node (x\n) at (0.8,0,2.5) {$x$};
+	\node (y\n) at (0.5,0.3,2.5) {$y$};
+	\node (z\n) at (0.5,0,3.1) {$z$};
+	\draw[->] (0.5,0,2.5) -- (x\n);
+	\draw[->] (0.5,0,2.5) -- (y\n);
+	\draw[->] (0.5,0,2.5) -- (z\n);
+\end{scope}
+};
+\begin{scope}[red]
+\draw[dashdotted] (0,0,2.5) -- (0,0,-2.5);
+\end{scope}
+\end{tikzpicture}
