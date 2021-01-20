@@ -1,0 +1,15 @@
+﻿\begin{tikzpicture}[>=latex,thick,scale=1.4]
+\draw[fill,pattern=north east lines,draw=none,pattern color=gray] (100:10) arc (100:80:10) -- (81:10.3) arc (81:99:10.3) -- cycle;
+\draw (99:10.5)  node[coordinate](L4){} arc (99:81:10.5) node[coordinate](R4){};
+\draw (99:10.3)  node[coordinate](L3){} arc (99:81:10.3) node[coordinate](R3){};
+\draw (100:10)  node[coordinate](L2){} arc (100:80:10) node[coordinate](R2){};
+\draw (100:9)  node[coordinate](L1){} arc (100:80:9) node[coordinate](R1){};
+\draw[thin,decorate,decoration={random steps,amplitude=0.2mm,segment length=1mm}](L1) -- (L2) -- (L3) -- (L4);
+\draw[thin,decorate,decoration={random steps,amplitude=0.2mm,segment length=1mm}](R1) -- (R2) -- (R3) -- (R4);
+\draw[thin,dashdotted] (101.25:9.6) arc (101.25:78.75:9.6);
+\node at (102:10.2) (A) [left]{viscoelastic material};
+\node at (78:10.2) (B) [right]{metal};
+\draw[thin] (A) -- (98:10.15);
+\draw[thin] (B) -- (81.5:10.4);
+\draw[thin] (B) -- (81:9.7);
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+﻿\begin{tikzpicture}[>=latex,scale=1.5,thick]
+\draw[->] (1,0.5,0) -- +(0,0.5,0,0) node[above] {$F_y(x=0),\xi_y(x=0)$};
+\draw[->,decorate,decoration={bent,aspect=0.3,amplitude=-8}] (0.9,0.25,0.5) -- + (0,-0.5,0) node [midway,left=2mm]{$M_z(x=0),\chi_z(x=0)$};
+\draw[->] (6,0.5,0) -- +(0,0.5,0,0) node[above] {$F_y(x=l),\xi_y(x=l)$};
+\draw[->,decorate,decoration={bent,aspect=0.3,amplitude=-8}] (6.2,-0.1,0.5) -- + (0,0.5,0) node [midway,right=2mm]{$M_z(x=l),\chi_z(x=l)$};
+%\draw[->] (1,1,0) node[left] {$F_y$} -- +(0,-0.5,0);
+\draw[thin] (1,-0.5,-0.5) -- +(5,0,0);
+\draw[thin,fill=gray!30!white,opacity=0.5] (1,-0.5,-0.5) -- +(0,0,1)-- +(0,1,1)-- +(0,1,0) --cycle;
+\draw[] (1,-0.5,-0.5) +(0,0,1)-- +(0,1,1)-- +(0,1,0);
+\draw%[decorate,decoration={random steps,amplitude=0.3mm,segment length=1mm}]
+ (6,-0.5,-0.5) -- +(0,0,1)-- +(0,1,1)-- +(0,1,0) --cycle;
+\draw (1,0.5,-0.5) -- +(5,0,0);
+\draw (1,0.5,0.5) -- +(5,0,0);
+\draw (1,-0.5,0.5) -- +(5,0,0);
+\begin{scope}[->,scale=1,yshift=-0.5cm]
+\draw (0,-1,0.5) -- +(7,0,0) node[right] {$x$};
+\draw (0,-1,0.5) -- +(0,0.7,0) node[above] {$y$};
+\draw (0,-1,0.5)  -- +(0,0,1) node[below] {$z$};
+\end{scope}
+\draw[thin] (1,-1.4,0.5) -- +(0,-0.2,0) node [below] {$x=0$};
+\draw[thin] (6,-1.4,0.5) -- +(0,-0.2,0) node [below] {$x=l$};
+\draw[thin] (3,0.35,-0.35) -- +(0,0.25,-1) node[above] {$B_z,m'$};
+\end{tikzpicture}
