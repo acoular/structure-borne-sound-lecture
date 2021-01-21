@@ -1,0 +1,14 @@
+﻿\begin{tikzpicture}[>=latex,scale=2,thick]
+\draw (-2,0,-2) -- +(4,0,0)-- +(4,0,4)-- +(0,0,4) --cycle;
+\begin{scope}[->,scale=0.5,xshift=-4cm]
+\draw (-2,0,0) -- +(1,0,0) node[below] {$x$};
+\draw (-2,0,0) -- +(0,1,0) node[above] {$y$};
+\draw (-2,0,0) -- +(0,0,1) node[below] {$z$};
+\end{scope}
+\draw[thin,<->] (-2,0,2.5) -- +(4,0,0) node [midway, below] {$l_x$};
+\draw[thin,<->] (2.3,0,-2) -- +(0,0,4) node [midway, below right] {$l_z$};
+\draw[thin] (-2,0,2.3) -- +(0,0,0.4);
+\draw[thin] (2,0,2.3) -- +(0,0,0.4);
+\draw[thin] (2.2,0,2) -- +(0.2,0,0);
+\draw[thin] (2.2,0,-2) -- +(0.2,0,0);
+\end{tikzpicture}
