@@ -1,0 +1,26 @@
+﻿\begin{tikzpicture}[>=latex,scale=1.5]
+	 		\path (0,0) node (a) [draw,text centered, text width =2.5cm] {Subsystem $i$\\$W_i$};
+	 		\draw[->] (0,1.5) node [above]{$P_{i}$} -- (a); 							
+	 		\draw[->] (a)-- (0,-1.5) node [below] {$P_{ii}$};
+\begin{scope}[xshift=5cm]
+	 		\path (-2,1) node (a)[draw] {$W_1$};
+	 		\path (2,1) node (b)[draw] {$W_2$};
+	 		\path (0,-1) node (c)[draw] {$W_3$};
+	 		\draw[->] (-2,2) node [above]{$P_{1}$} -- (a); 							
+	 		\draw[->] (a)-- +(0,-1) node [below] {$P_{11}$};
+	 		\draw[->] (b)-- +(0,-1) node [below] {$P_{22}$};
+	 		\draw[<-] (b)-- +(0,+1) node [above] {$P_{2}$};
+	 		\draw[->] (c)-- +(0,-1) node [below] {$P_{33}$};
+	 		\draw[<-] (c)-- +(0,+1) node [above] {$P_{3}$};
+	 		\begin{scope}[->,style=curve to,out=15,in=165,relative]
+		 		\small
+		 		\tikzstyle{every node}=[fill=white,shape=circle,sloped]
+		 		\draw (a) to node {$P_{12}$} (b);
+		 		\draw (b) to node {$P_{21}$} (a);
+		 		\draw (a) to node {$P_{13}$} (c);
+		 		\draw (c) to node {$P_{31}$} (a);
+		 		\draw (c) to node {$P_{32}$} (b);
+		 		\draw (b) to node {$P_{23}$} (c);
+		 	\end{scope}
+\end{scope}
+\end{tikzpicture}

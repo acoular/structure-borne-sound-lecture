@@ -1,0 +1,9 @@
+﻿\begin{tikzpicture}[>=latex,scale=2,thick]
+\draw (0,1) rectangle (2,1.5) node[below left] {0};
+\draw (0,0) rectangle (2,1) node[below left] {1};
+\draw (0,-.5) rectangle (2,0) node[below left] {4};
+\draw (-0.5,0) rectangle (0,1) node[below left] {2};
+\draw (2,0) rectangle (2.5,1) node[below left] {3};
+\draw (0,-1.5) rectangle (2,-0.5) node[below left] {5};
+\node at (3,-1) {(folded out)};
+\end{tikzpicture}

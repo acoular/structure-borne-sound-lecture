@@ -1,0 +1,10 @@
+﻿\begin{tikzpicture}[>=latex,thick]
+\draw[fill=white] (-2,-2) -- +(2,-1)-- +(4,2) -- +(3,5)-- +(0,4) --cycle;
+\begin{scope}[rotate around={90:(4,0)}, xshift=4cm]
+\draw[fill=white] (-2,-2) -- +(2,-1)-- +(4,2) -- +(3,5)-- +(0,4) --cycle;
+\end{scope}
+\fill[red] (1.5,0.5) circle [radius=2pt];
+\node at (-1,2) [below right] {plate 1};
+\node at (3,1) [below right] {plate 2};
+\node[red] at (3,0) {point connection};
+\end{tikzpicture}

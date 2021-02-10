@@ -1,0 +1,20 @@
+﻿\begin{tikzpicture}[>=latex,scale=2,thick]
+\begin{scope}[dashed,thin]
+\draw (0,0,0) -- +(2,0,0);
+\draw (0,0,0) -- +(0,1,0);
+\draw (0,0,0) -- +(0,0,0.5);
+\end{scope}
+\draw (2,0,0) -- +(0,1,0) -- +(0,1,0.5) -- +(0,0,0.5) -- cycle;
+\draw (2,1,0) -- +(-2,0,0) -- +(-2,0,0.5) -- +(0,0,0.5);
+\draw (0,1,0.5) -- +(0,-1,0) -- +(2,-1,0);
+\node at (1,-0.5) {Box 2\texttimes 1\texttimes 0.5 m\textsuperscript3};
+\begin{scope}[xshift=4cm,scale=.75]
+\draw (0,1) rectangle (2,1.5) node[below left] {0};
+\draw (0,0) rectangle (2,1) node[below left] {1};
+\draw (0,-.5) rectangle (2,0) node[below left] {4};
+\draw (-0.5,0) rectangle (0,1) node[below left] {2};
+\draw (2,0) rectangle (2.5,1) node[below left] {3};
+\draw (0,-1.5) rectangle (2,-0.5) node[below left] {5};
+\node at (3,-1) {(folded out)};
+\end{scope}
+\end{tikzpicture}
