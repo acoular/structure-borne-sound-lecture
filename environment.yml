@@ -1,0 +1,14 @@
+name: sbs3
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - numpy
+  - jupyter
+  - ipywidgets
+  - sympy
+  - matplotlib
+  - scipy
+  - jupyter_latex_envs
+  - traits
+  - pandas
