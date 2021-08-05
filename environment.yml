@@ -1,7 +1,5 @@
-name: sbs3
 channels:
   - defaults
-  - conda-forge
 dependencies:
   - numpy
   - jupyter
@@ -9,6 +7,5 @@ dependencies:
   - sympy
   - matplotlib
   - scipy
-  - jupyter_latex_envs
   - traits
   - pandas
