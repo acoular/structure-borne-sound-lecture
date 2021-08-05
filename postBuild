@@ -1,0 +1,3 @@
+#!/bin/bash
+jupyter nbextension install --py latex_envs --user
+jupyter nbextension enable --py latex_envs --user
