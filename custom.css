@@ -16,15 +16,17 @@
         font-family: 'Roboto Condensed', sans-serif;
     }
     h2 {
-        font-family: 'Roboto Slab', serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500 !important;
+        font-size: 1.5em !important;
     }
     h3{
-		font-family: 'Roboto Slab', serif;
+		font-family: 'Roboto', sans-serif;
         margin-top:12px;
         margin-bottom: 3px;
        }
 	h4{
-		font-family: 'Roboto Slab', serif;
+		font-family: 'Roboto', sans-serif;
        }
     h5 {
         font-family: 'Roboto Condensed', sans-serif;
@@ -33,9 +35,7 @@
         font-family: 'Roboto',Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
         line-height: 135%;
         font-size: 110%;
-        width:600px;
-        margin-left:auto;
-        margin-right:auto;
+        width:100%;
     }
 /*    .CodeMirror{
             font-family: "Source Code Pro";
