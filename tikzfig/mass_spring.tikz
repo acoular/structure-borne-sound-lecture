@@ -15,4 +15,5 @@
 	\draw[thick](g.north west) -- (g.north east);
 	\node(m1) at (0,2) [mass] {$m$};
 	\draw[spring]  ($(m1.270) -(0,1.35)$) -- +(0,1.35) node [pos=0.5,left] {$s$};
+ \draw[|->,thick,>=latex] (m1.0) ++(0.5,0)-- ++(0,-0.7)node[right]{$\xi$};
 \end{tikzpicture}
