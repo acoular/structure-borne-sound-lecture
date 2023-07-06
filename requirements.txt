@@ -2,7 +2,7 @@ jupyter-book
 matplotlib==3.3.2
 numpy==1.19.2
 sympy==1.6.2
-scipy==1.5.2
+scipy==1.10.0
 traits
 pandas
 jupyter_latex_envs
