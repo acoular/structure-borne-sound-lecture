@@ -81,9 +81,9 @@ acs-*.bib
 *.brf
 
 # knitr
-*-concordance.tex
-*.tikz
-*-tikzDictionary
+#*-concordance.tex
+#*.tikz
+#*-tikzDictionary
 
 # listings
 *.lol
