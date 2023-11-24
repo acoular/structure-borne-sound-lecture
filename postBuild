@@ -1,6 +1,6 @@
 #!/bin/bash
-jupyter nbextension install --py latex_envs --user
-jupyter nbextension enable --py latex_envs --user
+#jupyter nbextension install --py latex_envs --user
+#jupyter nbextension enable --py latex_envs --user
 mkdir ~/.jupyter
 mkdir ~/.jupyter/custom
 cp custom.css ~/.jupyter/custom/custom.css
