@@ -3,13 +3,13 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400' rel='stylesheet' type='text/css'>
 <style>
-    @font-face {
+/*    @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
-    }
+    }*/
     div.cell{
-        width:800px;
-        margin-left:6% !important;
+        width:80%;
+        margin-left:auto;
         margin-right:auto;
     }
     h1 {
@@ -69,9 +69,10 @@
 </style>
 <script>
     MathJax.Hub.Config({
-                        TeX: {
-                           extensions: ["AMSmath.js"]
-                           },
+                TeX: {
+                    extensions: ["AMSmath.js"],
+                    equationNumbers: { autoNumber: "AMS" }
+                },
                 tex2jax: {
                     inlineMath: [ ['$','$'], ["\\(","\\)"] ],
                     displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
