@@ -66,6 +66,9 @@
     .warning{
         color: rgb( 240, 20, 20 )
         }
+    .output_subarea {
+        font-size: 125%;
+    }
 </style>
 <script>
     MathJax.Hub.Config({
@@ -82,4 +85,9 @@
                     styles: {'.MathJax_Display': {"margin": 4}}
                 }
         });
+    MathJax.Hub.Queue(
+      ["resetEquationNumbers", MathJax.InputJax.TeX],
+      ["PreProcess", MathJax.Hub],
+      ["Reprocess", MathJax.Hub]
+    );
 </script>
