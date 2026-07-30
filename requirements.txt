@@ -1,5 +1,0 @@
-matplotlib==3.8
-sympy==1.11
-scipy==1.11
-traits
-pandas
