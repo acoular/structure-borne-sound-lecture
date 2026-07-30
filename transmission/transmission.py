@@ -14,13 +14,12 @@
     #~ from wxPython.wx import *
 #~ except:
     #~ pass
-from traits.api import *
-#from traits.trait_handlers import TraitHandler
 from numpy import *
 from numpy.linalg import solve
 #from LinearAlgebra import *
 #from sys import maxint
-from .tr_traits_helper import PosFloat
+from traitlets import Float as TFloat, HasTraits
+from .tr_traits_helper import PosFloat, Range, Trait
 from .itertype import itertype
 from .gauss import *
 
@@ -405,9 +404,9 @@ class CNode(TrObj):
 #        'y': 0.0,
 #        'z': 0.0
 #    }
-    x = 0.0
-    y = 0.0
-    z = 0.0
+    x = TFloat(0.0)
+    y = TFloat(0.0)
+    z = TFloat(0.0)
 
     
 #-------------------------------------------------------------------------------
@@ -415,7 +414,7 @@ class CNode(TrObj):
 #-------------------------------------------------------------------------------
 class ConnMember(TrObj):
     
-    K = Property()
+    K = property(lambda self: self.K_calc())
 
     #---------------------------------------------------------------------------
     #  returns a tuple of nodes (virtual)
@@ -461,9 +460,9 @@ class InfPlate(ConnMember):
 #    }
     sec = Trait(IsoPlateSec()) #section of plate
     node = Trait(CNode()) #attach node
-    y0 = 0.0 # y-offset
-    z0 = 0.0 # z-offset
-    theta = 1.0 # connection angle in degree
+    y0 = TFloat(0.0) # y-offset
+    z0 = TFloat(0.0) # z-offset
+    theta = TFloat(1.0) # connection angle in degree
 
        
     #---------------------------------------------------------------------------
@@ -504,13 +503,13 @@ class StripPlate(ConnMember):
 #        'y02': 0.0, # y-offset at node 2
 #        'z02': 0.0 # z-offset at node 2
 #    }   
-    sec = Trait(IsoPlateSec()), #section of plate
+    sec = Trait(IsoPlateSec()) #section of plate
     node1 = Trait(CNode()) #attach node 1
     node2 = Trait(CNode()) #attach node 2
-    y01 = Float(0.0) # y-offset at node 1
-    z01 = 0.0 # z-offset at node 1
-    y02 = 0.0 # y-offset at node 2
-    z02 = 0.0 # z-offset at node 2
+    y01 = TFloat(0.0) # y-offset at node 1
+    z01 = TFloat(0.0) # z-offset at node 1
+    y02 = TFloat(0.0) # y-offset at node 2
+    z02 = TFloat(0.0) # z-offset at node 2
         
     #~ #---------------------------------------------------------------------------
     #~ #  if K was never calculated, we should call K_calc first
@@ -664,9 +663,9 @@ class ConnBeam(ConnMember):
 #    }
     sec = Trait(BeamSec())
     node = Trait(CNode())
-    y0 = 0.0
-    z0 = 0.0
-    theta = 1.0
+    y0 = TFloat(0.0)
+    z0 = TFloat(0.0)
+    theta = TFloat(1.0)
        
     #---------------------------------------------------------------------------
     #  returns a tuple of nodes of length 1
@@ -943,7 +942,7 @@ class PointLineConnect(LineConnect):
 #        'dist': 1.0 #distance between point connections 
 #    }   
     NFT = Range(2,2**24,2)
-    dist = 1.0
+    dist = TFloat(1.0)
     member_classes=[InfPlate,StripPlate,PointLine] # type of possible members
 
     #---------------------------------------------------------------------------

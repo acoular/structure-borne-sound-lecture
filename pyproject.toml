@@ -11,4 +11,5 @@ dependencies = [
     "pympl>=1.2.1",
     "scipy>=1.16.3",
     "sympy>=1.14.0",
+    "traitlets>=5.14.3",
 ]
