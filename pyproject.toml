@@ -1,0 +1,14 @@
+[project]
+name = "skript-ks"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "jupyter>=1.1.1",
+    "jupyterlab-myst>=2.4.2",
+    "matplotlib>=3.10.7",
+    "pympl>=1.2.1",
+    "scipy>=1.16.3",
+    "sympy>=1.14.0",
+]

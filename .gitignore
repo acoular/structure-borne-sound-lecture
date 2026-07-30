@@ -15,7 +15,7 @@
 # *.eps
 # *.pdf
 *KS*.pdf
-.ipynb_checkpoints/*.ipynb
+.ipynb_checkpoints/*
 *__pycache__
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
