@@ -8,8 +8,9 @@ dependencies = [
     "jupyter>=1.1.1",
     "jupyterlab-myst>=2.4.2",
     "matplotlib>=3.10.7",
-    "pympl>=1.2.1",
     "scipy>=1.16.3",
     "sympy>=1.14.0",
     "traitlets>=5.14.3",
+    "pandas>=3.0.5",
+    "ipywidgets>=8.1.8",
 ]
